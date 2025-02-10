@@ -109,7 +109,7 @@ function Hero() {
                 </motion.div>
               </div>
               {/* Right Side */}
-              <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
+              <div className="hidden lg:block text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
                 <h1 className="opacity-0 text-7xl font-bold leading-tight ml-14 ">
                   Coders Coffee
                 </h1>
@@ -144,7 +144,7 @@ function Hero() {
           {/* Sidebar Menu Section */}
           {
             sidebar && (
-              <motion.div initial={{x: '100%'}} whileInView={{x: 0}} className="absolute top-0 right-0 w-[140px] h-full bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm z-10 ">
+              <motion.div initial={{x: '100%'}} whileInView={{x: 0}} className="absolute top-0 right-0 w-[100px] h-full bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm z-10 ">
               {/* White Line */}
               <div className="w-full h-full flex justify-center items-center">
                 <div className="flex flex-col justify-center items-center gap-6 text-white">
