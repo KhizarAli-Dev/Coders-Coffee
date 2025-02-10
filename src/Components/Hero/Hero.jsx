@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import BgImage from "../../assets/images/banner.png";
 import coffeeImage from "../../assets/images/coffee.png";
 import Navbar from "../Navbar/Navbar";
 import { motion } from "framer-motion";
-
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const bgImage = {
   backgroundImage: `url(${BgImage})`,
@@ -13,6 +13,7 @@ const bgImage = {
 };
 
 function Hero() {
+  const [sidebar, setSidebar] = useState(false)
   return (
     <>
       {/* Background Image */}
@@ -20,7 +21,7 @@ function Hero() {
         <section className="relative min-h-[750px] w-full">
           <div className="p-[1rem] sm:p-[2rem]">
             {/* Navbar */}
-            <Navbar />
+            <Navbar sidebar={sidebar} setSidebar={setSidebar}/>
             {/* Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px]">
               {/* Left Side */}
@@ -141,15 +142,30 @@ function Hero() {
           </div>
 
           {/* Sidebar Menu Section */}
-
-          <div className="absolute top-0 right-0 w-[140px] h-full bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm z-10 ">
-            {/* White Line */}
-            <div className="w-full h-full flex justify-center items-center gap-6">
-              <div className="w-[1px] h-[70px] bg-white "></div>
-              {/* Social Icons */}
-              <div className="w-[1px] h-[70px] bg-white "></div>
-            </div>
-          </div>
+          {
+            sidebar && (
+              <motion.div initial={{x: '100%'}} whileInView={{x: 0}} className="absolute top-0 right-0 w-[140px] h-full bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm z-10 ">
+              {/* White Line */}
+              <div className="w-full h-full flex justify-center items-center">
+                <div className="flex flex-col justify-center items-center gap-6 text-white">
+                  <div className="w-[1px] h-[70px] bg-white "></div>
+                  {/* Social Icons */}
+                  <div className="inline-block p-2 rounded-full cursor-pointer border-white border">
+                    <FaFacebookF className="text-2xl" />
+                  </div>
+                  <div className="inline-block p-2 rounded-full cursor-pointer border-white border">
+                    <FaTwitter className="text-2xl" />
+                  </div>
+                  <div className="inline-block p-2 rounded-full cursor-pointer border-white border">
+                    <FaInstagram className="text-2xl" />
+                  </div>
+  
+                  <div className="w-[1px] h-[70px] bg-white "></div>
+                </div>
+              </div>
+            </motion.div>
+            )
+          }
         </section>
       </main>
     </>
