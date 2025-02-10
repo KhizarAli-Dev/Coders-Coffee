@@ -37,7 +37,7 @@ function Hero() {
                   }}
                   className="text-7xl font-bold leading-tight ml-14 "
                 >
-                  Coders Coffee
+                  Codes Coffee
                 </motion.h1>
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
@@ -104,14 +104,14 @@ function Hero() {
                   className="absolute -top-20 left-[200px] z-[1]"
                 >
                   <h1 className="text-[140px] scale-150 font-bold text-darkGray/30 leading-none ">
-                    Coders Coffee
+                    Codes Coffee
                   </h1>
                 </motion.div>
               </div>
               {/* Right Side */}
               <div className="hidden lg:block text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
                 <h1 className="opacity-0 text-7xl font-bold leading-tight ml-14 ">
-                  Coders Coffee
+                  Codes Coffee
                 </h1>
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
@@ -125,7 +125,7 @@ function Hero() {
                   className="relative"
                 >
                   <div className="relative z-10 space-y-4">
-                    <h1 className="text-2xl"> Coders Coffee</h1>
+                    <h1 className="text-2xl"> Codes Coffee</h1>
                     <h1 className="text-sm opacity-55 leading-loose">
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       Sapiente ad ipsam nam eligendi officia corrupti recusandae

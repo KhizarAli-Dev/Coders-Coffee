@@ -20,7 +20,7 @@ function Navbar({ sidebar, setSidebar }) {
               }}
               className="text-2xl font-semibold uppercase"
             >
-              <span className="text-primary">Coders</span> Coffee
+              <span className="text-primary">Codes</span> Coffee
             </motion.h1>
 
             <motion.div
